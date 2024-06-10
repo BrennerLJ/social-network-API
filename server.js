@@ -7,8 +7,9 @@ const port = process.env.port || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(routes);
 
-app.get('/', (req, res) => {
+app.get('/api/users', (req, res) => {
   res.send(routes);
 });
 

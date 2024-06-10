@@ -57,14 +57,14 @@ module.exports = {
         });
       }
 
-      res.json({ message: 'User successfully deleted!' });
+      res.json({ message: 'User deleted!' });
     } catch (err) {
       console.log(err);
       res.staus(500).json(err);
     }
   },
   
-  // Update user by ID
+  // Updates a user by ID
   async updateUser(req, res) {
     try {
       const user = await User.findOneAndUpdate(
