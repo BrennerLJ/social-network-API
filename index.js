@@ -13,8 +13,9 @@ const activity = cwd.includes('01-Activities')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(routes);
 
-app.get('/', (req, res) => {
+app.get('/api/users', (req, res) => {
     res.send(routes);
   });
 
